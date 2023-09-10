@@ -1,6 +1,6 @@
-package com.learning.BMS.repository;
+package com.learning.bms.repository;
 
-import com.learning.BMS.entity.Customer;
+import com.learning.bms.entity.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,7 +1,7 @@
-package com.learning.BMS.service;
+package com.learning.bms.service;
 
-import com.learning.BMS.entity.Customer;
-import com.learning.BMS.repository.CustomerRepository;
+import com.learning.bms.entity.Customer;
+import com.learning.bms.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,7 +1,7 @@
-package com.learning.BMS.controller;
+package com.learning.bms.controller;
 
-import com.learning.BMS.entity.Customer;
-import com.learning.BMS.service.CustomerService;
+import com.learning.bms.entity.Customer;
+import com.learning.bms.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

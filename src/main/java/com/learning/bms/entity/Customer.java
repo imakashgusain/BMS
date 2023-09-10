@@ -1,6 +1,6 @@
-package com.learning.BMS.entity;
+package com.learning.bms.entity;
 
-import com.learning.BMS.config.Auditable;
+import com.learning.bms.config.Auditable;
 import lombok.Getter;
 import lombok.Setter;
 

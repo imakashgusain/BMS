@@ -1,4 +1,4 @@
-package com.learning.BMS.config;
+package com.learning.bms.config;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -21,7 +21,7 @@ import java.util.Date;
 //specifies the callback listener classes to be used for an entity or mapped
 //superclass
 @EntityListeners(AuditingEntityListener.class)
-public class Auditable<U> {
+public class Auditable {
 
     //updatable flag helps to avoid the override of
     //column's value during the update operation
