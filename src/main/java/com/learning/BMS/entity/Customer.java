@@ -1,5 +1,6 @@
 package com.learning.BMS.entity;
 
+import com.learning.BMS.config.Auditable;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,7 +11,7 @@ import javax.persistence.*;
 @Setter
 @Entity
 @Table(name = "customer")
-public class Customer {
+public class Customer extends Auditable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
