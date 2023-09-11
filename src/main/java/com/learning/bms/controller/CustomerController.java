@@ -1,13 +1,23 @@
-package com.learning.BMS.controller;
+package com.learning.bms.controller;
 
-import com.learning.BMS.entity.Customer;
-import com.learning.BMS.service.CustomerService;
+import com.learning.bms.entity.Customer;
+import com.learning.bms.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
+/**
+ * The type Customer controller.
+ */
 @RestController
 @RequestMapping("/api/customers")
 public class CustomerController {
@@ -15,11 +25,22 @@ public class CustomerController {
     @Autowired
     private CustomerService customerService;
 
-    @GetMapping
+
+    /**
+     * Gets all customers.
+     *
+     * @return the all customers
+     */
     public List<Customer> getAllCustomers() {
         return customerService.getAllCustomers();
     }
 
+    /**
+     * Gets customer by id.
+     *
+     * @param customerId the customer id
+     * @return the customer by id
+     */
     @GetMapping("/{customerId}")
     public ResponseEntity<Customer> getCustomerById(@PathVariable Long customerId) {
         Customer customer = customerService.getCustomerById(customerId);
@@ -30,11 +51,24 @@ public class CustomerController {
         }
     }
 
+    /**
+     * Create customer customer.
+     *
+     * @param customer the customer
+     * @return the customer
+     */
     @PostMapping("/{post}")
     public Customer createCustomer(@RequestBody Customer customer) {
         return customerService.saveCustomer(customer);
     }
 
+    /**
+     * Update customer response entity.
+     *
+     * @param customerId      the customer id
+     * @param updatedCustomer the updated customer
+     * @return the response entity
+     */
     @PutMapping("/{customerId}")
     public ResponseEntity<Customer> updateCustomer(
             @PathVariable Long customerId,
@@ -47,6 +81,12 @@ public class CustomerController {
         }
     }
 
+    /**
+     * Delete customer response entity.
+     *
+     * @param customerId the customer id
+     * @return the response entity
+     */
     @DeleteMapping("/{customerId}")
     public ResponseEntity<Void> deleteCustomer(@PathVariable Long customerId) {
         customerService.deleteCustomer(customerId);
